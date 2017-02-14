@@ -55,12 +55,12 @@ public class H_CenterFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_ic_nav_menu:
-                Log.i("H_CenterFragment","<<<<<<<<<<<<<<<<< sider");
+//                Log.i("H_CenterFragment","<<<<<<<<<<<<<<<<< sider");
                 showSider();
                 Occlusionll.setVisibility(View.VISIBLE);
                 break;
             case R.id.Occlusionll:
-                Log.i("H_CenterFragment","<<<<<<<<<<<<<<<<< sider");
+//                Log.i("H_CenterFragment","<<<<<<<<<<<<<<<<<c sider");
                 closeSider();
                 Occlusionll.setVisibility(View.INVISIBLE);
                 break;
@@ -69,12 +69,14 @@ public class H_CenterFragment extends Fragment implements View.OnClickListener{
 
     public void  showSider(){
         float s = siderL.getTranslationX();
+//        Log.i("H_CenterFragment","<<<<<<<<<<<<<<<<<show"+s);
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(siderL, "translationX", 0f, s + (int)(SCREEN_WIDTH*0.87));
         objectAnimator.setDuration(400).start();
     }
     public void  closeSider(){
         float s = siderL.getTranslationX();
-        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(siderL, "translationX", 0f, s - (int)(SCREEN_WIDTH*0.87));
+//        Log.i("H_CenterFragment","<<<<<<<<<<<<<<<<<close"+s);
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(siderL, "translationX", s, s - (int)(SCREEN_WIDTH*0.87));
         objectAnimator.setDuration(400).start();
     }
 }

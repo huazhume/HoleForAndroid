@@ -45,7 +45,6 @@
             android:layout_marginRight="5dp"
             android:src="@mipmap/ic_add_story_black_24dp"
             />
-
     </RelativeLayout>
     <LinearLayout
         android:id="@+id/Occlusionll"
